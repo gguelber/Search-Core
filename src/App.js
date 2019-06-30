@@ -42,24 +42,24 @@ function App() {
       const passInput = document.getElementById('signPassword')
       
       const res = await fetch('http://localhost:3000/api/user/register', {
-      method: 'POST',
-      headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-          name: nameInput.value,  
-          email: emailInput.value,
-          password: passInput.value
-      })
-      })
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: nameInput.value,  
+            email: emailInput.value,
+            password: passInput.value
+        })
+        })
       if (res.status === 201) {
-        setIsRegistered(true)
-        Swal.fire({
-              type: 'success',
-              title: 'Success!',
-              text: 'User Created'
-          })
+          setIsRegistered(true)
+          Swal.fire({
+                type: 'success',
+                title: 'Success!',
+                text: 'User Created'
+            })
           setTimeout(() => {
             setIsRegistered(false)
           }, 3000)
@@ -72,18 +72,18 @@ function App() {
           })
       } 
       if (res.status === 409) {
-      Swal.fire({
-          type: 'error',
-          title: 'Registration Failed',
-          text: 'Email already exists'
-      })
+          Swal.fire({
+              type: 'error',
+              title: 'Registration Failed',
+              text: 'Email already exists'
+          })
       } 
       if (res.status === 500) {
-      Swal.fire({
-          type: 'error',
-          title: 'Registration Failed',
-          text: 'Internal Error! Please try again'
-      })
+          Swal.fire({
+              type: 'error',
+              title: 'Registration Failed',
+              text: 'Internal Error! Please try again'
+          })
       } 
   }
 

@@ -208,7 +208,6 @@ export default function SearchPage() {
         const indexFirstItem = indexLastItem - itemsPerPage
         const currentItems = favorites.slice(indexFirstItem, indexLastItem)
         setCurrentPageItems([...currentItems])
-      
     }
 
 

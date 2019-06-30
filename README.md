@@ -12,6 +12,10 @@ Go to /core-api and also type:
 
         npm install
 
+### Instructions to test (only few functions are available, need to start the server to test the API)
+
+        npm run test
+
 ### Instructions to run the SERVER (Run the server before the front-end to ensure it uses port 3000 and the front-end uses 3001!):
 
 Create an account on MongoAtlas, start a new cluster (free) and create a database (any name). 

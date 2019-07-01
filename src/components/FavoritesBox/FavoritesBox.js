@@ -8,7 +8,7 @@ export default function FavoritesBox(props) {
             <ul className="paginationList">
                 {props.paginationArray.map(number => (
                     <li key={number} className="paginationItem">
-                        <button className="paginationBtn" onClick={() => props.paginate(number)} >{number}</button>
+                        <button id='topBtn' className="paginationBtn" onClick={() => props.paginate(number)} >{number}</button>
                     </li>                    
                 ))}
             </ul>
@@ -29,7 +29,7 @@ export default function FavoritesBox(props) {
             <ul className="paginationList">
                 {props.paginationArray.map(number => (
                     <li key={number} className="paginationItem">
-                        <button className="paginationBtn" onClick={() => props.paginate(number)} >{number}</button>
+                        <button id='bottomBtn' className="paginationBtn" onClick={() => props.paginate(number)} >{number}</button>
                     </li>                    
                 ))}
             </ul>

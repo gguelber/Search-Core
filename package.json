@@ -2,7 +2,6 @@
   "name": "search-core",
   "version": "0.1.0",
   "description": "Application to search for cientific articles using the Core API",
-
   "private": true,
   "dependencies": {
     "bcrypt": "^3.0.6",
@@ -41,6 +40,8 @@
     ]
   },
   "devDependencies": {
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "nodemon": "^1.19.1"
   }
 }

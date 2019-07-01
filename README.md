@@ -1,6 +1,6 @@
 ### Search Core
 
-Application to search for cientific articles using the Core API.
+Application to search for scientific articles using the Core API.
 
 ### Instructions to install dependencies
 

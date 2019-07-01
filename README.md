@@ -14,7 +14,7 @@ Go to /core-api and also type:
 
 ### Instructions to test (only few functions are available, need to start the server to test the API)
 
-        npm run test
+        npm test
 
 ### Instructions to run the SERVER (Run the server before the front-end to ensure it uses port 3000 and the front-end uses 3001!):
 

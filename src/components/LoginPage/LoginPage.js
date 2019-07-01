@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import LoginBox from './components/LoginBox/LoginBox';
-import UserList from './components/UserList/UserList';
-import SearchPage from './components/SearchPage/SearchPage';
+import LoginBox from '../LoginBox/LoginBox';
+import UserList from '../UserList/UserList';
+import SearchPage from '../SearchPage/SearchPage';
 import Swal from 'sweetalert2'
 
 

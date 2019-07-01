@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
-import Nav from './Nav'
+import Nav from './components/Nav/Nav'
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 import SearchPage from './components/SearchPage/SearchPage';
-import LoginPage from './LoginPage';
+import LoginPage from './components/LoginPage/LoginPage';
 import SignUpPage from './components/SignUpPage/SignUpPage';
 import Swal from 'sweetalert2'
 

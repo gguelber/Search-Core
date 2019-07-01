@@ -9,45 +9,18 @@ function Nav(props) {
         color: 'white',
         textDecoration: 'none'
     }
-
- 
-
     return (
         <nav>
             <ul className='nav-links'>
-                <Link style={navStyle} to='/search' onClick={() => {
-                    if (!localStorage.getItem('token')) {
-                        Swal.fire({
-                            type: 'error',
-                            title: 'Please login first',
-                          })
-                    }
-                }}>
+                <Link style={navStyle} to='/search' onClick={props.search}>
                     <li className='navItems'>Search</li>
                 </Link>
-
-                <Link style={navStyle} to='/login' onClick={() => {
-                    if (localStorage.getItem('token')) {
-                        Swal.fire({
-                            type: 'error',
-                            title: 'You are already logged in',
-                          })
-                    }
-                }}>
+                <Link style={navStyle} to='/login' onClick={props.login}>
                     <li className='navItems'>Login</li>
                 </Link>
-
-                <Link style={navStyle} to='/register' onClick={() => {
-                    if (localStorage.getItem('token')) {
-                        Swal.fire({
-                            type: 'error',
-                            title: 'Please logout first',
-                          })
-                    }
-                }}>
+                <Link style={navStyle} to='/register' onClick={props.register}>
                     <li className='navItems'>Register</li>
                 </Link>
-                
                 <Link style={navStyle} to='/logout' onClick={props.logout} >
                     <li className='navItems'>Logout</li>
                 </Link>

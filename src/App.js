@@ -29,6 +29,32 @@ function App() {
       })
     }
   }
+  
+
+  const handleNavSearchLink = () => {
+    if (!localStorage.getItem('token')) {
+      Swal.fire({
+          type: 'error',
+          title: 'Please login first',
+      })
+    }
+  }
+  const handleNavLoginLink = () => {
+    if (localStorage.getItem('token')) {
+      Swal.fire({
+          type: 'error',
+          title: 'You are already logged in',
+      })
+    }
+  }
+  const handleNavRegisterLink = () => {
+    if (localStorage.getItem('token')) {
+      Swal.fire({
+          type: 'error',
+          title: 'Please logout first',
+      })
+    }
+  }
  
 
 
@@ -92,7 +118,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Nav logout={checkToken}/>      
+        <Nav search={handleNavSearchLink} login={handleNavLoginLink} register={handleNavRegisterLink} logout={checkToken}/>      
         <Route path="/" exact render={() => {
           return (
             <Redirect to="/login"/>
